@@ -8,12 +8,20 @@ wd = webdriverClass()
 driver = wd.getWebDriver("Chrome")
 bp = BaseClass(driver)
 
-bp.launchWebPage("https://parabank.parasoft.com/parabank/register.htm", "ParaBank | Register for Free Online Account Access")
+bp.launchWebPage("https://www.saucedemo.com/", "Swag Labs")
 
-Customer_Name = bp.getWebElement("username","name")
-# Customer_Name.click()
-Customer_Name.send_keys("Ajinkya")
+ele = bp.isElementDisplayed("user-name", "id")
+print(ele)
 
+bp.sendText("standard_user", "user-name", "id")
+bp.sendText("secret_sauce", "password", "id")
+bp.clickOnElement("login-button", "id")
+
+
+
+#Customer_Name = bp.getWebElement("user-name","name")
+# Customer_Name = bp.waitForElement("username","name")
+# Customer_Name.send_keys("Ajinkya")
 
 time.sleep(2)
 driver.quit()

@@ -15,7 +15,7 @@ def customLogger():
     logger.setLevel(logging.DEBUG)
 
     # 4.) Create the fileHandler to save the logs in the file
-    fileHandler = logging.FileHandler("../reports/DemoBlazeWebsite.log", mode='w')
+    fileHandler = logging.FileHandler("../reports/PracticeProjectlogs.log", mode='a')
 
     # 5.) Set the logLevel for fileHandler
     fileHandler.setLevel(logging.DEBUG)

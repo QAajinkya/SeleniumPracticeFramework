@@ -1,12 +1,14 @@
 from traceback import print_stack
+
+from allure_commons.types import AttachmentType
 from selenium.common.exceptions import ElementNotVisibleException, NoSuchElementException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common import actions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
-
 import utilities.CustomLogger as cl
+import allure
 
 
 class BaseClass:
@@ -74,6 +76,8 @@ class BaseClass:
             self.log.error(
                 "WebElement not found with locator value " + locatorValue + " using locatorType " + locatorType)
             print_stack()
+            self.takeScreenshot(locatorType)
+            assert False
         return webElement
 
     def clickOnElement(self, locatorValue, locatorType="id"):
@@ -87,6 +91,7 @@ class BaseClass:
             self.log.error(
                 "Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
             print_stack()
+            self.takeScreenshot(locatorType)
             assert False
 
     def sendText(self, text, locatorValue, locatorType="id"):
@@ -100,6 +105,8 @@ class BaseClass:
             self.log.error(
                 "Unable to Sent the text " + text + " in WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
             print_stack()
+            self.takeScreenshot(locatorType)
+            assert False
 
     def getText(self, locatorValue, locatorType="id"):
         elementText = None
@@ -113,7 +120,7 @@ class BaseClass:
             self.log.error(
                 "Unable to get the text " + elementText + " from WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
             print_stack()
-
+        self.takeScreenshot(locatorType)
         return elementText
 
     def isElementDisplayed(self, locatorValue, locatorType="id"):
@@ -128,7 +135,7 @@ class BaseClass:
             self.log.error(
                 "WebElement is not Displayed on web page with locator value " + locatorValue + " using locatorType " + locatorType)
             print_stack()
-
+        self.takeScreenshot(locatorType)
         return elementDisplayed
 
     def scrollTo(self, locatorValue, locatorType="id"):
@@ -143,3 +150,6 @@ class BaseClass:
             self.log.error(
                 "Unable to scroll to WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
             print_stack()
+
+    def takeScreenshot(self,screenshot):
+        allure.attach(self.driver.get_screenshot_as_png(),name=screenshot,attachment_type=AttachmentType.PNG)

@@ -2,7 +2,7 @@ from selenium import webdriver
 import utilities.CustomLogger as cl
 
 
-class webdriverClass:
+class WebDriverClass:
     log = cl.customLogger()
 
     def getWebDriver(self, browserName):

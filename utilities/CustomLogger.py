@@ -1,6 +1,5 @@
 import inspect
 import logging
-
 import allure
 
 
@@ -15,7 +14,7 @@ def customLogger():
     logger.setLevel(logging.DEBUG)
 
     # 4.) Create the fileHandler to save the logs in the file
-    fileHandler = logging.FileHandler("../reports/PracticeProjectlogs.log", mode='a')
+    fileHandler = logging.FileHandler("../reports/SeleniumPracticeAllureReports.log", mode='w')
 
     # 5.) Set the logLevel for fileHandler
     fileHandler.setLevel(logging.DEBUG)

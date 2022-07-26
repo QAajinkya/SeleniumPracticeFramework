@@ -1,0 +1,3 @@
+INFO     BaseClass:basefile.py:27 Web Page Launched with URL : http://automationpractice.com/index.php
+ERROR    BaseClass:basefile.py:76 WebElement not found with locator value //input[@id='id_gender1'] using locatorType xpath
+ERROR    BaseClass:basefile.py:91 Unable to Click on WebElement with locator value //input[@id='id_gender1'] using locatorType xpath

@@ -1,15 +1,8 @@
-03/07/22 02:56:25 PM Sunday - BaseClass - INFO : Web Page Launched with URL : http://automationpractice.com/index.php
-03/07/22 02:56:25 PM Sunday - BaseClass - INFO : WebElement found with locator value shop-phone using locatorType class
-03/07/22 02:56:25 PM Sunday - BaseClass - INFO : WebElement is Displayed on web page with locator value shop-phone using locatorType class
-03/07/22 02:56:28 PM Sunday - BaseClass - INFO : WebElement found with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-03/07/22 02:56:32 PM Sunday - BaseClass - INFO : Clicked on WebElement with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-03/07/22 02:56:32 PM Sunday - BaseClass - INFO : WebElement found with locator value login_form using locatorType id
-03/07/22 02:56:32 PM Sunday - BaseClass - INFO : WebElement is Displayed on web page with locator value login_form using locatorType id
-03/07/22 02:56:33 PM Sunday - BaseClass - INFO : WebElement found with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : Clicked on WebElement with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : WebElement found with locator value login_form using locatorType id
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : WebElement is Displayed on web page with locator value login_form using locatorType id
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : WebElement found with locator value email_create using locatorType id
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : Sent the text abcmagic@gmail.com in WebElement with locator value email_create using locatorType id
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : WebElement found with locator value SubmitCreate using locatorType name
-03/07/22 02:56:35 PM Sunday - BaseClass - INFO : Clicked on WebElement with locator value SubmitCreate using locatorType name
+26/07/22 06:34:07 PM Tuesday - BaseClass - INFO : element found with locatortype: class with the locatorvalue :shop-phone
+26/07/22 06:34:07 PM Tuesday - BaseClass - INFO : element with locatortype: class and with the locatorvalue :shop-phoneis displayed 
+26/07/22 06:34:10 PM Tuesday - BaseClass - INFO : element found with locatortype: xpath with the locatorvalue ://a[@title='Log in to your customer account']
+26/07/22 06:34:10 PM Tuesday - BaseClass - INFO : clicked on element with locatortype: xpath and with the locatorvalue ://a[@title='Log in to your customer account']
+26/07/22 06:34:29 PM Tuesday - BaseClass - INFO : element not found with locatortype: id and with the locatorvalue :login_form
+26/07/22 06:34:29 PM Tuesday - BaseClass - INFO : element with locatortype: id and with the locatorvalue :login_form is not displayed
+26/07/22 06:34:53 PM Tuesday - BaseClass - INFO : element not found with locatortype: id and with the locatorvalue :account-creation_form
+26/07/22 06:34:53 PM Tuesday - BaseClass - INFO : element with locatortype: id and with the locatorvalue :account-creation_form is not displayed

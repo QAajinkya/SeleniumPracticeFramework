@@ -1,0 +1,62 @@
+Before Method
+element found with locatortype: id with the locatorvalue :account-creation_form
+element with locatortype: id and with the locatorvalue :account-creation_formis displayed 
+element found with locatortype: xpath with the locatorvalue ://input[@id='id_gender1']
+clicked on element with locatortype: xpath and with the locatorvalue ://input[@id='id_gender1']
+element found with locatortype: xpath with the locatorvalue ://input[@id='customer_firstname']
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='customer_firstname']
+element found with locatortype: xpath with the locatorvalue ://input[@id='customer_lastname']
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='customer_lastname']
+element found with locatortype: xpath with the locatorvalue ://input[@id='passwd'] 
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='passwd'] 
+element found with locatortype: xpath with the locatorvalue ://select[@id='days']
+-
+1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+11  
+12  
+13  
+14  
+15  
+16  
+17  
+18  
+19  
+20  
+21  
+22  
+23  
+24  
+25  
+26  
+27  
+28  
+29  
+30  
+31  
+selected the element from dropdown locatortype: xpath and with the locatorvalue ://select[@id='days']
+element found with locatortype: xpath with the locatorvalue ://select[@id='months']
+-
+January 
+February 
+March 
+April 
+May 
+June 
+July 
+August 
+September 
+October 
+November 
+December 
+selected the element from dropdown locatortype: xpath and with the locatorvalue ://select[@id='months']
+After Method
+After Class

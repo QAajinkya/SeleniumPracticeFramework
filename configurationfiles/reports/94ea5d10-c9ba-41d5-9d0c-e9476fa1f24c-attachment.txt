@@ -1,0 +1,2 @@
+INFO     WebDriverClass:driverclass.py:15 Chrome browser is initialised
+INFO     BaseClass:basefile.py:29 Web Page not Launched with URL : http://automationpractice.com/index.php

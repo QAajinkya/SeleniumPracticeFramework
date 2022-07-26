@@ -1,0 +1,3 @@
+INFO     WebDriverClass:driverclass.py:14 Chrome browser is initialised
+INFO     BaseClass:basefile.py:78 element not found with locatortype: class and with the locatorvalue :shop-phone
+INFO     BaseClass:basefile.py:153 element with locatortype: class and with the locatorvalue :shop-phone is not displayed

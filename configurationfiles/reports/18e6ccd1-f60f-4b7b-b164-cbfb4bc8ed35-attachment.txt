@@ -1,0 +1,8 @@
+INFO     BaseClass:basefile.py:71 WebElement found with locator value //a[@title='Log in to your customer account'] using locatorType xpath
+INFO     BaseClass:basefile.py:85 Clicked on WebElement with locator value //a[@title='Log in to your customer account'] using locatorType xpath
+INFO     BaseClass:basefile.py:71 WebElement found with locator value login_form using locatorType id
+INFO     BaseClass:basefile.py:129 WebElement is Displayed on web page with locator value login_form using locatorType id
+INFO     BaseClass:basefile.py:71 WebElement found with locator value email_create using locatorType id
+INFO     BaseClass:basefile.py:99 Sent the text abcmagic@gmail.com in WebElement with locator value email_create using locatorType id
+INFO     BaseClass:basefile.py:71 WebElement found with locator value SubmitCreate using locatorType name
+INFO     BaseClass:basefile.py:85 Clicked on WebElement with locator value SubmitCreate using locatorType name

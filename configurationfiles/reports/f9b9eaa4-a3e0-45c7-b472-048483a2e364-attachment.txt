@@ -1,0 +1,2 @@
+INFO     BaseClass:basefile.py:78 element not found with locatortype: id and with the locatorvalue :account-creation_form
+INFO     BaseClass:basefile.py:153 element with locatortype: id and with the locatorvalue :account-creation_form is not displayed

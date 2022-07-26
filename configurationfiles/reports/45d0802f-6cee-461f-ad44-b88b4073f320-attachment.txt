@@ -1,0 +1,6 @@
+Before Class
+Start Browser
+
+Web Page Launched with URL : http://automationpractice.com/index.php
+Before Method
+After Method

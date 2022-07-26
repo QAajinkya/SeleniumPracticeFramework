@@ -1,0 +1,142 @@
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\Scripts\py.test.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 164, in main
+    ret: Union[ExitCode, int] = config.hook.pytest_cmdline_main(
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 315, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 268, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 322, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 347, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 111, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 130, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 219, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 258, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 338, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 259, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 166, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\unittest.py", line 327, in runtest
+    self._testcase(result=self)  # type: ignore[arg-type]
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 650, in __call__
+    return self.run(*args, **kwds)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "D:\PracticeFramework\SeleniumPracticeFramework\test\test_CreateAccount.py", line 20, in test_UserAccount
+    self.ca.selectGenderAsMale()
+  File "D:\PracticeFramework\SeleniumPracticeFramework\pages\userRegistrationScreen.py", line 46, in selectGenderAsMale
+    self.clickOnElement(self._selectGenderMale, "xpath")
+  File "D:\PracticeFramework\SeleniumPracticeFramework\base\basefile.py", line 86, in clickOnElement
+    webElement = self.waitForElement(locatorValue, locatorType)
+  File "D:\PracticeFramework\SeleniumPracticeFramework\base\basefile.py", line 78, in waitForElement
+    print_stack()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\Scripts\py.test.exe\__main__.py", line 7, in <module>
+    sys.exit(console_main())
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 164, in main
+    ret: Union[ExitCode, int] = config.hook.pytest_cmdline_main(
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 315, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 268, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 322, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 347, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 111, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 130, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 219, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 258, in call_runtest_hook
+    return CallInfo.from_call(
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 338, in from_call
+    result: Optional[TResult] = func()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 259, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 166, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\unittest.py", line 327, in runtest
+    self._testcase(result=self)  # type: ignore[arg-type]
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 650, in __call__
+    return self.run(*args, **kwds)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Users\ajinkyas.shukla_info\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "D:\PracticeFramework\SeleniumPracticeFramework\test\test_CreateAccount.py", line 20, in test_UserAccount
+    self.ca.selectGenderAsMale()
+  File "D:\PracticeFramework\SeleniumPracticeFramework\pages\userRegistrationScreen.py", line 46, in selectGenderAsMale
+    self.clickOnElement(self._selectGenderMale, "xpath")
+  File "D:\PracticeFramework\SeleniumPracticeFramework\base\basefile.py", line 93, in clickOnElement
+    print_stack()

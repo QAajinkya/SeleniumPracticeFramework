@@ -1,0 +1,4 @@
+INFO     BaseClass:basefile.py:74 WebElement found with locator value email_create using locatorType id
+INFO     BaseClass:basefile.py:102 Sent the text abcmagic@gmail.com in WebElement with locator value email_create using locatorType id
+INFO     BaseClass:basefile.py:74 WebElement found with locator value SubmitCreate using locatorType name
+INFO     BaseClass:basefile.py:88 Clicked on WebElement with locator value SubmitCreate using locatorType name

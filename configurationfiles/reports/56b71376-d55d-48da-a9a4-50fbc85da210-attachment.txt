@@ -1,0 +1,8 @@
+Before Class
+Start Browser
+
+Web Page Launched with URL : http://automationpractice.com/index.php
+Before Method
+element found with locatortype: class with the locatorvalue :shop-phone
+element with locatortype: class and with the locatorvalue :shop-phoneis displayed 
+After Method

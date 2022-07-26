@@ -1,0 +1,6 @@
+Before Method
+element found with locatortype: id with the locatorvalue :email_create
+send text  on element with locatortype: id and with the locatorvalue :email_create
+element not found with locatortype: name and with the locatorvalue :SubmitCreate
+unable to click on element with locatortype: name and with the locatorvalue :SubmitCreate
+After Method

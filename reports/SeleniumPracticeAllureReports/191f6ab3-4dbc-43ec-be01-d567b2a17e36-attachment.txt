@@ -1,8 +1,0 @@
-[32mINFO    [0m BaseClass:basefile.py:72 WebElement found with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-[32mINFO    [0m BaseClass:basefile.py:84 Clicked on WebElement with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-[32mINFO    [0m BaseClass:basefile.py:72 WebElement found with locator value login_form using locatorType id
-[32mINFO    [0m BaseClass:basefile.py:125 WebElement is Displayed on web page with locator value login_form using locatorType id
-[32mINFO    [0m BaseClass:basefile.py:72 WebElement found with locator value email_create using locatorType id
-[32mINFO    [0m BaseClass:basefile.py:97 Sent the text abcmagic@gmail.com in WebElement with locator value email_create using locatorType id
-[32mINFO    [0m BaseClass:basefile.py:72 WebElement found with locator value SubmitCreate using locatorType name
-[32mINFO    [0m BaseClass:basefile.py:84 Clicked on WebElement with locator value SubmitCreate using locatorType name

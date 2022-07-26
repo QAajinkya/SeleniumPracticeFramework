@@ -1,14 +1,18 @@
+import datetime
+import random
+import string
+import time
+import utilities.CustomLogger as cl
 from traceback import print_stack
-
+from selenium.webdriver.support.select import Select
 from allure_commons.types import AttachmentType
-from selenium.common.exceptions import ElementNotVisibleException, NoSuchElementException
+from appium.webdriver.common.touch_action import TouchAction
+from selenium.common.exceptions import ElementNotVisibleException, NoSuchElementException, ElementNotSelectableException
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common import actions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
-import utilities.CustomLogger as cl
 import allure
+import json
 
 
 class BaseClass:
@@ -17,139 +21,271 @@ class BaseClass:
     def __init__(self, driver):
         self.driver = driver
 
-    def __init__(self, driver):
-        self.driver = driver
-
     def launchWebPage(self, url, title):
         try:
             self.driver.get(url)
             assert title in self.driver.title
-            self.log.info("Web Page Launched with URL : " + url)
+            print("Web Page Launched with URL : " + url)
         except:
-            self.log.info("Web Page not Launched with URL : " + url)
+            print("Web Page not Launched with URL : " + url)
 
-    def getLocatorType(self, locatorType):
-        locatorType = locatorType.lower()
-        if locatorType == "id":
-            return By.ID
-        elif locatorType == "name":
-            return By.NAME
-        elif locatorType == "class":
-            return By.CLASS_NAME
-        elif locatorType == "xpath":
-            return By.XPATH
-        elif locatorType == "css":
-            return By.CSS_SELECTOR
-        elif locatorType == "tag":
-            return By.TAG_NAME
-        elif locatorType == "link":
-            return By.LINK_TEXT
-        elif locatorType == "plink":
-            return By.PARTIAL_LINK_TEXT
+    def wait_for_element(self, locatorvalue, locatortype):
+        locatortype = locatortype.lower()
+        element = None
+        wait = WebDriverWait(self.driver, 10, poll_frequency=1,
+                             ignored_exceptions=[ElementNotVisibleException,
+                                                 ElementNotSelectableException,
+                                                 NoSuchElementException])
+        if locatortype == "id":
+            element = wait.until(lambda x: x.find_element(By.ID, locatorvalue))
+            return element
+        elif locatortype == "class":
+            element = wait.until(lambda x: x.find_element(By.CLASS_NAME, locatorvalue))
+            return element
+        elif locatortype == "name":
+            #element = wait.until(#lambda x: x.find_element(By.NAME, 'uiselector().description("%s")' % (locatorvalue)))
+            element = wait.until(lambda x: x.find_element(By.NAME, '%s' % (locatorvalue)))
+            return element
+        elif locatortype == "xpath":
+            element = wait.until(lambda x: x.find_element(By.XPATH, '%s' % (locatorvalue)))
+            return element
+        elif locatortype == "css":
+            element = wait.until(lambda x: x.find_element(By.CSS_SELECTOR, '%s' % (locatorvalue)))
+            return element
+        elif locatortype == "tag":
+            element = wait.until(lambda x: x.find_element(By.TAG_NAME, '%s' % (locatorvalue)))
+            return element
+        elif locatortype == "link":
+            element = wait.until(lambda x: x.find_element(By.LINK_TEXT, '%s' % (locatorvalue)))
+            return element
+        elif locatortype == "plink":
+            element = wait.until(lambda x: x.find_element(By.PARTIAL_LINK_TEXT, '%s' % (locatorvalue)))
+            return element
         else:
-            self.log.error("Locator Type : " + locatorType + " entered is not found")
-        return False
+            self.log.info("locator value " + locatorvalue + "not found")
+            print("locator value " + locatorvalue + "not found")
 
-    def getWebElement(self, locatorValue, locatorType="id"):
-        webElement = None
+        return element
+
+    def get_element(self, locatorvalue, locatortype="xpath"):
+        element = None
         try:
-            locatorType = locatorType.lower()
-            locatorByType = self.getLocatorType(locatorType)
-            webElement = self.driver.find_element(locatorByType, locatorValue)
-            self.log.info("WebElement found with locator value " + locatorValue + " using locatorType " + locatorByType)
+            locatortype = locatortype.lower()
+            element = self.wait_for_element(locatorvalue, locatortype)
+            self.log.info("element found with locatortype: " + locatortype + " with the locatorvalue :" + locatorvalue)
+            print("element found with locatortype: " + locatortype + " with the locatorvalue :" + locatorvalue)
         except:
-            self.log.error(
-                "WebElement not found with locator value " + locatorValue + " using locatorType " + locatorType)
-            print_stack()
-        return webElement
-
-    def waitForElement(self, locatorValue, locatorType="id"):
-        webElement = None
-        try:
-            locatorType = locatorType.lower()
-            locatorByType = self.getLocatorType(locatorType)
-            wait = WebDriverWait(self.driver, 25, poll_frequency=1,
-                                 ignored_exceptions=[ElementNotVisibleException, NoSuchElementException])
-            webElement = wait.until(ec.presence_of_element_located((locatorByType, locatorValue)))
-            self.log.info("WebElement found with locator value " + locatorValue + " using locatorType " + locatorType)
-        except:
-            self.log.error(
-                "WebElement not found with locator value " + locatorValue + " using locatorType " + locatorType)
-            print_stack()
-            self.takeScreenshot(locatorType)
-            assert False
-        return webElement
-
-    def clickOnElement(self, locatorValue, locatorType="id"):
-        try:
-            locatorType = locatorType.lower()
-            webElement = self.waitForElement(locatorValue, locatorType)
-            webElement.click()
             self.log.info(
-                "Clicked on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+                "element not found with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print("element not found with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+
+        return element
+
+    def clickOnElement(self, locatorvalue, locatortype="xpath"):
+        element = None
+        try:
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            element.click()
+            print("clicked on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            self.log.info("clicked on element with locatortype: " + locatortype + " and with the locatorvalue :"
+                          + locatorvalue)
         except:
-            self.log.error(
-                "Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
-            print_stack()
-            self.takeScreenshot(locatorType)
+            self.log.info("unable to click on element with locatortype: " + locatortype + " and with the locatorvalue :"
+                          + locatorvalue)
+            print(
+                "unable to click on element with locatortype: " + locatortype + " and with the locatorvalue :"
+                + locatorvalue)
+            self.take_screenshot("Screenshots")
             assert False
 
-    def sendText(self, text, locatorValue, locatorType="id"):
+    def send_text(self, text, locatorvalue, locatortype="xpath"):
+        element = None
         try:
-            locatorType = locatorType.lower()
-            webElement = self.waitForElement(locatorValue, locatorType)
-            webElement.send_keys(text)
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            element.send_keys(text)
             self.log.info(
-                "Sent the text " + text + " in WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+                "send text  on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "send text  on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
         except:
-            self.log.error(
-                "Unable to Sent the text " + text + " in WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
-            print_stack()
-            self.takeScreenshot(locatorType)
+            self.log.info(
+                "unable to send text on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "unable to send text on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            self.take_screenshot("Screenshots")
             assert False
 
-    def getText(self, locatorValue, locatorType="id"):
-        elementText = None
+    def clear(self, locatorvalue, locatortype="xpath"):
+        element = None
         try:
-            locatorType = locatorType.lower()
-            webElement = self.waitForElement(locatorValue, locatorType)
-            elementText = webElement.text
-            self.log.info(
-                "Got the text " + elementText + " from WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            element.click()
+            element.clear()
+            self.log.info("clear text on element with locatortype: " + locatortype + " and with the locatorvalue :"
+                          + locatorvalue)
+            print(
+                "clear text on element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
         except:
-            self.log.error(
-                "Unable to get the text " + elementText + " from WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
-            print_stack()
-        self.takeScreenshot(locatorType)
-        return elementText
+            self.log.info("unable to clear text on element with locatortype: " + locatortype
+                          + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "unable to clear text on element with locatortype: " + locatortype + " and with the locatorvalue :"
+                + locatorvalue)
+            self.take_screenshot("Screenshots")
+            assert False
 
-    def isElementDisplayed(self, locatorValue, locatorType="id"):
-        elementDisplayed = None
+    def is_displayed(self, locatorvalue, locatortype="xpath"):
+        element = None
         try:
-            locatorType = locatorType.lower()
-            webElement = self.waitForElement(locatorValue, locatorType)
-            elementDisplayed = webElement.is_displayed()
-            self.log.info(
-                "WebElement is Displayed on web page with locator value " + locatorValue + " using locatorType " + locatorType)
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            value = element.is_displayed()
+            self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                          + "is displayed ")
+            print(
+                "element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                + "is displayed ")
+            return True
         except:
-            self.log.error(
-                "WebElement is not Displayed on web page with locator value " + locatorValue + " using locatorType " + locatorType)
-            print_stack()
-        self.takeScreenshot(locatorType)
-        return elementDisplayed
+            self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                          + " is not displayed")
+            print(
+                "element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                + " is not displayed")
+            self.take_screenshot("Screenshots")
+            return False
+
+    def get_text(self, locatorvalue, locatortype="xpath"):
+        element = None
+        try:
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            e = element.text()
+            self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                          + "is displayed ")
+            print(
+                "element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                + "is displayed ")
+            return e
+        except:
+            self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                          + " is not displayed")
+            print(
+                "element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
+                + " is not displayed")
+            self.take_screenshot("Screenshots")
+
+    def screenshot(self, screenShotName):
+        filename = screenShotName + "_" + (time.strftime("%d_%m_%y_%h_%m_%s")) + ".png"
+        screenshotdirectory = "D:/PracticeFramework/SeleniumPracticeFramework/reports/screenshots"
+        screenshotpath = screenshotdirectory + filename
+        try:
+            self.driver.save_screenshot(screenshotpath)
+            self.log.info("screenshot save to path : " + screenshotpath)
+            print("screenshot save to path : " + screenshotpath)
+        except:
+            self.log.info("unable to save screenshot to the path : " + screenshotpath)
+            print("unable to save screenshot to the path : " + screenshotpath)
+
+    def take_screenshot(self, screenshot_name):
+        # this is for allure
+        allure.attach(self.driver.get_screenshot_as_png(), name=screenshot_name, attachment_type=AttachmentType.PNG)
+
+    def swipe(self, x_start, y_start, x_end, y_end):
+        devicesize = self.driver.get_window_size()
+        screenwidth = devicesize['width']
+        screenheight = devicesize['height']
+        # step 2 : find the x,y coordinate to swipe from bottom to top
+        startx = screenwidth / 2
+        endx = screenwidth / 2
+        starty = screenheight * 8 / 9
+        endy = screenheight / 9
+
+        # step 3 : create touchaction class object
+        actions = TouchAction(self.driver)
+
+        # step 4 : call long press method along with move_to method
+        actions.long_press(None, x_start, y_start).move_to(None, x_end, y_end).release().perform()
+
+    def random_char(self, char_num):
+        return ''.join(random.choice(string.digits) for _ in range(char_num))
+
+    def convert_mm_ss_to_seconds_lrm(self, value):
+        # Left to right mark
+        new_val = value.split(":")
+        remain_time = new_val[0].replace("\u200e", "")
+        minutes = remain_time.replace("−", '')
+        return int(minutes) * 60 + int(new_val[1])
+
+    def read_json_file(self):
+        # Read JSON Data
+        myjsonfile = open(
+            'D:/PracticeFramework/SeleniumPracticeFramework/configurationfiles/passwords.json', 'r')
+        jsondata = myjsonfile.read()
+        return json.loads(jsondata)
+
+    def key_code(self, value):
+        self.driver.press_keycode(value)
+
+    def get_current_date_and_time(self):
+        return str(datetime.datetime.time())
 
     def scrollTo(self, locatorValue, locatorType="id"):
         actions = ActionChains(self.driver)
         try:
             locatorType = locatorType.lower()
-            webElement = self.waitForElement(locatorValue, locatorType)
+            webElement = self.wait_for_element(locatorValue, locatorType)
             actions.move_to_element(webElement).perform()
             self.log.info(
                 "Scrolled to WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+            print(
+                "Scrolled to WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
         except:
-            self.log.error(
+            self.log.info(
+                "Unable to scroll to WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
+            print(
                 "Unable to scroll to WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
             print_stack()
 
-    def takeScreenshot(self,screenshot):
-        allure.attach(self.driver.get_screenshot_as_png(),name=screenshot,attachment_type=AttachmentType.PNG)
+    def get_Option_by_Text_Index(self, text, locatorvalue, locatortype="xpath"):
+        element = None
+        try:
+            locatortype = locatortype.lower()
+            element = self.get_element(locatorvalue, locatortype)
+            select = Select(element)
+            # dd_v = select.options
+            # for dd_values in dd_v:
+            #     print(dd_values.text)
+            select.select_by_index(text)
+            self.log.info(
+                "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+        except:
+            self.log.info(
+                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            self.take_screenshot("Screenshots")
+            assert False
+
+    def get_Option_by_Text_value(self, text, locatorvalue, locatortype="xpath"):
+        element = None
+
+        try:
+            select = Select(self.get_element(locatorvalue, locatortype.lower()))
+            select.select_by_visible_text(text)
+            self.log.info(
+                "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+        except:
+            self.log.info(
+                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            print(
+                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+            self.take_screenshot("Screenshots")
+            assert False

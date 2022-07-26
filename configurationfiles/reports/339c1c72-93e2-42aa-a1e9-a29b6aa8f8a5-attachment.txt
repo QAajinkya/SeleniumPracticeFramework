@@ -1,0 +1,17 @@
+Before Method
+element found with locatortype: id with the locatorvalue :account-creation_form
+element with locatortype: id and with the locatorvalue :account-creation_formis displayed 
+element found with locatortype: xpath with the locatorvalue ://input[@id='id_gender1']
+clicked on element with locatortype: xpath and with the locatorvalue ://input[@id='id_gender1']
+element found with locatortype: xpath with the locatorvalue ://input[@id='customer_firstname']
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='customer_firstname']
+element found with locatortype: xpath with the locatorvalue ://input[@id='customer_lastname']
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='customer_lastname']
+element found with locatortype: xpath with the locatorvalue ://input[@id='passwd'] 
+send text  on element with locatortype: xpath and with the locatorvalue ://input[@id='passwd'] 
+element found with locatortype: xpath with the locatorvalue ://select[@id='days']
+selected the element from dropdown locatortype: xpath and with the locatorvalue ://select[@id='days']
+element found with locatortype: xpath with the locatorvalue ://select[@id='months']
+selected the element from dropdown locatortype: xpath and with the locatorvalue ://select[@id='months']
+After Method
+After Class

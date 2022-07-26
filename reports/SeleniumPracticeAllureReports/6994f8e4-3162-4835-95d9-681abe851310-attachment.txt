@@ -1,8 +1,0 @@
-[32mINFO    [0m WebDriverClass:driverclass.py:12 Chrome browser is initialised
-[32mINFO    [0m BaseClass:basefile.py:27 Web Page Launched with URL : http://automationpractice.com/index.php
-[32mINFO    [0m BaseClass:basefile.py:74 WebElement found with locator value shop-phone using locatorType class
-[32mINFO    [0m BaseClass:basefile.py:132 WebElement is Displayed on web page with locator value shop-phone using locatorType class
-[32mINFO    [0m BaseClass:basefile.py:74 WebElement found with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-[32mINFO    [0m BaseClass:basefile.py:88 Clicked on WebElement with locator value //a[@title='Log in to your customer account'] using locatorType xpath
-[32mINFO    [0m BaseClass:basefile.py:74 WebElement found with locator value login_form using locatorType id
-[32mINFO    [0m BaseClass:basefile.py:132 WebElement is Displayed on web page with locator value login_form using locatorType id

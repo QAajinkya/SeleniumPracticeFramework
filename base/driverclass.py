@@ -17,7 +17,6 @@ class WebDriverClass:
             self.log.info("Safari browser is initialised")
         elif browserName == "Firefox":
             driver = webdriver.Firefox(GeckoDriverManager.install())
-
             self.log.info("Firefox browser is initialised")
 
         return driver

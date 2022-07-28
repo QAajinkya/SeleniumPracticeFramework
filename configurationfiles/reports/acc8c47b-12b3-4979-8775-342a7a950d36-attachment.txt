@@ -1,1 +1,0 @@
-INFO     WebDriverClass:driverclass.py:15 Chrome browser is initialised

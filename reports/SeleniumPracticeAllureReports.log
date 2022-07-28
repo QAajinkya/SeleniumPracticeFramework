@@ -1,4 +1,2 @@
-26/07/22 07:03:32 PM Tuesday - BaseClass - INFO : element found with locatortype: class with the locatorvalue :shop-phone
-26/07/22 07:03:32 PM Tuesday - BaseClass - INFO : element with locatortype: class and with the locatorvalue :shop-phoneis displayed 
-26/07/22 07:03:35 PM Tuesday - BaseClass - INFO : element found with locatortype: xpath with the locatorvalue ://a[@title='Log in to your customer account']
-26/07/22 07:03:36 PM Tuesday - BaseClass - INFO : clicked on element with locatortype: xpath and with the locatorvalue ://a[@title='Log in to your customer account']
+28/07/22 06:11:19 PM Thursday - BaseClass - INFO : element not found with locatortype: xpath and with the locatorvalue ://a[@title='Log in to your customer account']
+28/07/22 06:11:19 PM Thursday - BaseClass - INFO : unable to click on element with locatortype: xpath and with the locatorvalue ://a[@title='Log in to your customer account']

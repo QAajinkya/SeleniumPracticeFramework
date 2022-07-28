@@ -5,4 +5,4 @@ os.system('py.test -rA --disable-pytest-warnings --alluredir=reports/ D:/Practic
           'SeleniumPracticeFramework/test/TestSuite.py')
 
 # To generate the allure reports
-os.system('allure serve D:/PracticeFramework/SeleniumPracticeFramework/reports/SeleniumPracticeAllureReports')
+#os.system('allure serve D:/PracticeFramework/SeleniumPracticeFramework/reports/SeleniumPracticeAllureReports')

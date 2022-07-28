@@ -1,4 +1,0 @@
-INFO     WebDriverClass:driverclass.py:15 Chrome browser is initialised
-INFO     BaseClass:basefile.py:27 Web Page Launched with URL : http://automationpractice.com/index.php
-ERROR    BaseClass:basefile.py:76 WebElement not found with locator value account-creation_form using locatorType id
-ERROR    BaseClass:basefile.py:135 WebElement is not Displayed on web page with locator value account-creation_form using locatorType id

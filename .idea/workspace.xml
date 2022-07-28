@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c13cb8ed-db52-480b-97d2-32c984801116" name="Changes" comment="" />
+    <list default="true" id="c13cb8ed-db52-480b-97d2-32c984801116" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/forgot_password.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_forgot_password.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_loginuser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/readProperties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/basefile.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/basefile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurationfiles/TestRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurationfiles/TestRun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurationfiles/config.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/configurationfiles/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/navigateToUserRegistration.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigateToUserRegistration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userRegistrationScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userRegistrationScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/SeleniumPracticeAllureReports.log" beforeDir="false" afterPath="$PROJECT_DIR$/reports/SeleniumPracticeAllureReports.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CreateAccounttest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/CreateAccounttest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestSuite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2CCJQdRPSZSxROIHXaizxLbtPKz" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,7 +61,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PythonSelFramework" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PycharmProjects" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -49,7 +72,7 @@
       <recent name="D:\PracticeFramework\SeleniumPracticeFramework\base" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TestRun">
+  <component name="RunManager" selected="Python tests.Python tests for test_loginuser.loginTestUser.test_login_with_user">
     <configuration name="TestRun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPracticeFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSuite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="login_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPracticeFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/TestSuite.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pages/login_user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="basefile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="readProperties" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPracticeFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -100,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/base" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\PracticeFramework\SeleniumPracticeFramework\utilities\basefile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/readProperties.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test.CreateAccounttest.CreateAccountTest.test_userAccountCreate" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_loginuser.loginTestUser.test_login_with_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="SeleniumPracticeFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,17 +167,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.CreateAccounttest.CreateAccountTest.test_userAccountCreate&quot;" />
+      <option name="_new_target" value="&quot;test_loginuser.loginTestUser.test_login_with_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_loginuser.loginTestUser.test_login_with_user" />
         <item itemvalue="Python.TestRun" />
+        <item itemvalue="Python.login_user" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.basefile" />
-        <item itemvalue="Python.TestSuite" />
-        <item itemvalue="Python tests.Python tests for test.CreateAccounttest.CreateAccountTest.test_userAccountCreate" />
+        <item itemvalue="Python.readProperties" />
       </list>
     </recent_temporary>
   </component>

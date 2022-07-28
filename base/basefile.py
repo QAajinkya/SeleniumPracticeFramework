@@ -32,7 +32,7 @@ class BaseClass:
     def wait_for_element(self, locatorvalue, locatortype):
         locatortype = locatortype.lower()
         element = None
-        wait = WebDriverWait(self.driver, 10, poll_frequency=1,
+        wait = WebDriverWait(self.driver, 25, poll_frequency=1,
                              ignored_exceptions=[ElementNotVisibleException,
                                                  ElementNotSelectableException,
                                                  NoSuchElementException])
@@ -43,7 +43,6 @@ class BaseClass:
             element = wait.until(lambda x: x.find_element(By.CLASS_NAME, locatorvalue))
             return element
         elif locatortype == "name":
-            #element = wait.until(#lambda x: x.find_element(By.NAME, 'uiselector().description("%s")' % (locatorvalue)))
             element = wait.until(lambda x: x.find_element(By.NAME, '%s' % (locatorvalue)))
             return element
         elif locatortype == "xpath":
@@ -81,7 +80,7 @@ class BaseClass:
 
         return element
 
-    def clickOnElement(self, locatorvalue, locatortype="xpath"):
+    def click_on_element(self, locatorvalue, locatortype="xpath"):
         element = None
         try:
             locatortype = locatortype.lower()
@@ -144,10 +143,10 @@ class BaseClass:
             element = self.get_element(locatorvalue, locatortype)
             value = element.is_displayed()
             self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
-                          + "is displayed ")
+                          + " is displayed ")
             print(
                 "element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
-                + "is displayed ")
+                + " is displayed ")
             return True
         except:
             self.log.info("element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue
@@ -266,9 +265,9 @@ class BaseClass:
                 "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
         except:
             self.log.info(
-                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+                "unable to select element from dropdown with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
             print(
-                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+                "unable to select element from dropdown with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
             self.take_screenshot("Screenshots")
             assert False
 
@@ -284,8 +283,8 @@ class BaseClass:
                 "selected the element from dropdown locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
         except:
             self.log.info(
-                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+                "unable to select element from dropdown with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
             print(
-                "unable to select the element with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
+                "unable to select element from dropdown with locatortype: " + locatortype + " and with the locatorvalue :" + locatorvalue)
             self.take_screenshot("Screenshots")
             assert False

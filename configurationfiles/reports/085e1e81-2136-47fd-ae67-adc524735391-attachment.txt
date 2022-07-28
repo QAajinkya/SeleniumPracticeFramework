@@ -1,4 +1,0 @@
-INFO     BaseClass:basefile.py:75 element found with locatortype: xpath with the locatorvalue ://a[@title='Log in to your customer account']
-INFO     BaseClass:basefile.py:91 clicked on element with locatortype: xpath and with the locatorvalue ://a[@title='Log in to your customer account']
-INFO     BaseClass:basefile.py:78 element not found with locatortype: id and with the locatorvalue :login_form
-INFO     BaseClass:basefile.py:153 element with locatortype: id and with the locatorvalue :login_form is not displayed

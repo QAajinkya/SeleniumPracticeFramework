@@ -3,7 +3,7 @@ import utilities.CustomLogger as cl
 import unittest
 import pytest
 from pages.userRegistrationScreen import CreateAccount
-from pages.navigateToUserRegistration import loginFile
+from pages.navigateToUserRegistration import createuseraccount
 
 
 @pytest.mark.usefixtures("beforeClass", "beforeMethod")
@@ -12,14 +12,12 @@ class CreateAccountTest(unittest.TestCase):
     @pytest.fixture(autouse=True)
     def classObjects(self):
         self.ca = CreateAccount(self.driver)
-        self.sp = loginFile(self.driver)
+        self.sp = createuseraccount(self.driver)
 
     @pytest.mark.run(order=1)
     def test_HomePage(self):
         self.sp.verify_home_page_loaded()
         time.sleep(3)
-        # self.sp.clickOnSignin()
-        # self.sp.verifyLoginFormloaded()
 
     @pytest.mark.run(order=2)
     def test_enterDataInForm(self):
@@ -51,3 +49,8 @@ class CreateAccountTest(unittest.TestCase):
         self.ca.enter_mobile_phone()
         self.ca.enter_alias_address()
         self.ca.click_on_register()
+        self.ca.login_page_loaded()
+
+        # CustomerName = "TestingUser QAAutomation"
+        # assert True == CustomerName
+        # print("Signup user successfull")

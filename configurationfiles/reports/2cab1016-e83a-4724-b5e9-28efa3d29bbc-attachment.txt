@@ -1,9 +1,0 @@
-Before Method
-element found with locatortype: id with the locatorvalue :account-creation_form
-element with locatortype: id and with the locatorvalue :account-creation_formis displayed 
-element found with locatortype: xpath with the locatorvalue ://input[@id='id_gender1']
-clicked on element with locatortype: xpath and with the locatorvalue ://input[@id='id_gender1']
-element not found with locatortype: name and with the locatorvalue :customer_firstname
-unable to send text on element with locatortype: name and with the locatorvalue :customer_firstname
-After Method
-After Class

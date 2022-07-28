@@ -1,6 +1,0 @@
-Before Class
-Start Browser
-
-Before Method
-After Method
-After Class
